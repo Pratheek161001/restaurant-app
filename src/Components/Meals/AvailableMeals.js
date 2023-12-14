@@ -5,27 +5,27 @@ import MealItem from './MealItem/MealItem';
 const DUMMY_MEALS = [
     {
       id: 'm1',
-      name: 'Sushi',
-      description: 'Finest fish and veggies',
-      price: 22.99,
+      name: 'Butter Chicken',
+      description: 'Finest chicken , mouth watering flavour.',
+      price: 80.00,
     },
     {
       id: 'm2',
-      name: 'Schnitzel',
-      description: 'A german specialty!',
-      price: 16.5,
+      name: 'Chicken Tikka ',
+      description: 'Smoky barbeque chicken!',
+      price: 70.00,
     },
     {
       id: 'm3',
-      name: 'Barbecue Burger',
-      description: 'American, raw, meaty',
-      price: 12.99,
+      name: 'Salad',
+      description: 'Healthy ,fresh green veggies.',
+      price: 30.00,
     },
     {
       id: 'm4',
-      name: 'Green Bowl',
-      description: 'Healthy...and green...',
-      price: 18.99,
+      name: 'Virgin Mohito',
+      description: 'fizzy... chilled...refreshing',
+      price: 50.00,
     },
   ];
 const AvailableMeals = () => {
