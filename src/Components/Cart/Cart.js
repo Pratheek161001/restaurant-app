@@ -12,6 +12,8 @@ const Cart = props => {
     const reducequantity=(itemid)=>{
         carycntx.removeItem(itemid);
     }
+    const alerthandler=()=>{alert('THANK YOU FOR ODERING.....YOUR ORDER WILL BE DELIVERED IN FEW 30 MINUTES')}
+    
 
     const cartItems= <h3><ul className={classes['cart-items']}>
     {carycntx.items.map((item)=>(
@@ -27,7 +29,7 @@ const Cart = props => {
         </div>
         <div className={classes.actions}>
             <button className={classes['button--alt']} onClick={props.onclose}>close</button>
-            <button className={classes.button}>order</button>
+            <button className={classes.button} onClick={alerthandler}>order</button>
         </div>
     </Modal>
   )
