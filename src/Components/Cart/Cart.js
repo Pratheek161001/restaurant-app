@@ -10,12 +10,12 @@ const Cart = props => {
     totalprice=carycntx.items.reduce((acc,item)=>acc+(item.price*item.quantity),0)
 
     const reducequantity=(itemid)=>{
-        itemid.removeItem(itemid);
+        carycntx.removeItem(itemid);
     }
 
     const cartItems= <h3><ul className={classes['cart-items']}>
     {carycntx.items.map((item)=>(
-    <li key={item.name}>{item.name} ( {item.quantity} )-------------------Rs {item.price} <button onClick={()=>reducequantity(item.id)}>-</button></li>))
+    <li key={item.name}>{item.name} ( {item.quantity} )-------------------Rs {item.price} <button onClick={()=>reducequantity(item.name)}>-</button></li>))
     }</ul></h3>;
         
   return (

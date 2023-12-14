@@ -8,10 +8,15 @@ const CartProvider = props => {
     const addItemCarthandler=(item)=>{
       updateItems([...items,item])
     }
-    const removeItemfromcartHandler=(id)=>{
-      console.log('reducing')
-
-    }
+    const removeItemfromcartHandler = (id) => {
+      const updatedItems = items.map((item) => {
+        if (item.name === id) {
+          return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+      });
+        updateItems(updatedItems.filter((item) => item.quantity > 0)); 
+    };
     const cartContext={
         items:items ,
         totalAmount:0,
